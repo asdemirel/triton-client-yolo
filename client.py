@@ -271,7 +271,7 @@ if __name__ == '__main__':
 
         inputs = []
         outputs = []
-        if FLAGS:
+        if FLAGS.half:
             inputs.append(grpcclient.InferInput(INPUT_NAMES[0], [1, 3, FLAGS.width, FLAGS.height], "FP16"))
         else:
             inputs.append(grpcclient.InferInput(INPUT_NAMES[0], [1, 3, FLAGS.width, FLAGS.height], "FP32"))
